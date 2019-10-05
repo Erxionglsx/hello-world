@@ -1,0 +1,101 @@
+<link href="http://libs.baidu.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet">
+<!--引用流行的响应式框架  Bootstrap  来美化它-->
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" 
+      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" 
+      crossorigin="anonymous">
+<!--引用了Font Awesome 是一个非常方便的图标库-->
+
+<html>
+    <title >表单</title>
+    <body background="C:\Users\22874\Pictures\Saved Pictures\w.png">  <!--设置背景图片-->
+        <style>    /*CSS样式*/
+            td{
+                color:antiquewhite;
+            }
+            caption{
+                font-size: 44px;
+                color:rgb(37, 134, 224);
+            }
+        </style>
+        <center>
+        <form action="hh.html" method="post" name="form1">
+           <table align="center" valign="middle">     <!--利用表格来使文本框对齐-->
+               <caption>表单</caption>
+               <hr color="#FF6433">
+             <tr>
+                <td style="color:antiquewhite">用&nbsp&nbsp户&nbsp名：</td> <!--利用空格来使文字对齐---->
+                <td><input name="username" class="form-control" type="text" id="UserName4" maxlength="20" placeholder="必填"></td>
+            </tr>
+             <tr>
+                <td>密&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp码：</td>
+                <td><input name="pwd" class="form-control" type="password" id="pwd" size="20" maxlength="20" placeholder="必填"></td>
+             </tr>
+             <tr>
+             <td>确认密码：</td>
+             <td><input name="pwd2" class="form-control" type="password" id="PWD25" size="20" maxlength="20" placeholder="必填"></td>
+            </tr> 
+            <tr>   
+            <td>性&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp别：</td>
+            <td><label><input name="sex" type="radio" class="noborder"
+                              value="男" checked >男</label>&nbsp;  <!--label内关联-->
+            <input name="sex" type="radio" class="noborder" value="女">女</td>
+            </tr>
+            <tr> 
+            <td>爱&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp好：</td>
+            <td><input name="like" type="checkbox"id="like"  value="体育">体育
+                <input name="like" type="checkbox" id="like" value="旅游">旅游
+                <input name="like" type="checkbox" id="like" value="听音乐">听音乐
+                <input name="like" type="checkbox" id="like" value="看书">看书</td>
+            </tr>      
+            <tr>
+                 <td>E&nbsp-&nbsp&nbspmail:</td>
+                 <td><input name="email"  class="form-control" type="text" id="PWD224" size="30" placeholder="选填"></td>
+            </tr>
+        </table><br>
+            <div class="row">
+                <!--按钮使用了Bootstrap-->
+                    <button class="btn btn-primary" onclick="check()"><i class="fa fa-thumbs-up"></i>确认保存</button>
+                    &nbsp;&nbsp;<!--使用了Font Awesome图标-->
+                    <button class="btn  btn-info"><i class="fa fa-info-circle"></i>重新填写</button>
+                    &nbsp;&nbsp;
+                    <button class="btn  btn-danger" onclick="window.close()"><i class="fa fa-trash"></i> 关闭</button>
+                    &nbsp;&nbsp;
+                    <button class="btn  btn-info"><i class="fa fa-podcast"></i>提交</button>
+                    
+            </div><br>
+
+                   <input name="Submit" type="submit" class="btn_grey" value="确认保存"
+                          onclick="check()">
+                   <input name="Reset" type="reset" class="btn_grey" id="Reset" value="重新填写">
+                   <input name="Button" type="button" value="关闭" onclick="window.close()">
+                   <button type="button">提交</button>
+                  <!-- <input type="image" name="imageField"
+                              src="E:\编程软件\HBuilderX\训练\lianxi\img\02.jpg"> -->
+            </div>
+        </form>
+        </center>
+        <script type="text/javascript">
+            function check(){
+                if(form1.username.value==""){   //判断用户名是否为空
+                    alert("请输入用户名！");
+                    form1.username.focus();
+                    return;
+                }else if(form1.pwd.value==""){  //判断密码是否为空
+                    alert("请输入密码！");
+                    form1.pwd.focus();
+                    return;
+                }else if(form1.pwd2.value==""){  //判断确认密码是否为空
+                    alert("请确认密码！");
+                    form1.pwd2.focus();
+                    return;
+                }else if(form1.like.value==""){  //判断确认爱好是否选择
+                    alert("请选择爱好！");
+                    form1.like.focus();
+                    return;  
+                }else{
+                    form1.submit();     //提交表单
+                }
+            }
+        </script>
+    </body>
+</html>

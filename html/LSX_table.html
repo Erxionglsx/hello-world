@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <title>单元格跨行跨列</title>
+    </head>
+    <body>
+    <center>
+        <h4>单元格跨两行：</h4>
+        <table border="1">   <!--border="1",有边框；border="",无边框-->
+            <tr>
+                <th>Name</th>
+                <th colspan="2">Telephone</th>
+            </tr>
+            <tr>
+                <td>Bill Gates</td>
+                <td>555 77 883</td>
+                <td>555 77 844</td>
+            </tr>
+        </table>
+
+        <h4>单元格跨两列：</h4>
+        <table border="1">
+            <tr>
+                <th>First Name:</th>
+                <td>Bill Gates</td>
+            </tr>
+            <tr>
+                <th rowspan="2">Telephone</th>
+                <td>555 77 843</td>
+            </tr>
+            <tr>
+                <td>555 77 844</td>
+            </tr>
+        </table>
+    </center>
+    </body>
+</html>
