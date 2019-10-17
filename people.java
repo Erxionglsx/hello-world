@@ -1,3 +1,4 @@
 public static void main(){
-   system.out.println("people");
+   system.out.println("peoples!");
+   system.out.println("peoples!");
 }
